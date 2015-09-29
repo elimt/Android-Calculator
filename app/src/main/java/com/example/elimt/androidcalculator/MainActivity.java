@@ -11,22 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button nine;
-    Button eight;
-    Button seven;
-    Button six;
-    Button five;
-    Button four;
-    Button three;
-    Button two;
-    Button one;
-    Button zero;
-    Button decimal;
-    Button plus;
-    Button minus;
-    Button divide;
-    Button multiply;
-    Button equals;
+    Button nine, eight, seven, six, five, four, three, two, one, zero, decimal ,plus, minus, divide, multiply, equals;
 
     TextView results;
 
@@ -39,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-isResults = false;
+        isResults = false;
+        
         nine = (Button)findViewById(R.id.but9);
         eight = (Button)findViewById(R.id.but8);
         seven = (Button)findViewById(R.id.but7);
@@ -58,8 +44,10 @@ isResults = false;
         equals = (Button) findViewById(R.id.butEqual);
         results = (TextView) findViewById(R.id.Results);
 
-        one.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        one.setOnClickListener(new View.OnClickListener() 
+        {
+                public void onClick(View v) 
+            {
                 if(isResults)
                 results.setText("");
                 a = results.getText().toString();
@@ -70,7 +58,6 @@ isResults = false;
         });
         two.setOnClickListener(new View.OnClickListener()
         {
-
             public void onClick(View v) {
                 if(isResults)
                     results.setText("");
@@ -83,7 +70,6 @@ isResults = false;
 
         three.setOnClickListener(new View.OnClickListener()
         {
-
             public void onClick(View v) {
                 if(isResults)
                 results.setText("");
@@ -97,7 +83,6 @@ isResults = false;
 
         four.setOnClickListener(new View.OnClickListener()
         {
-
             public void onClick(View v) {
                 if(isResults)
                 results.setText("");
@@ -111,7 +96,6 @@ isResults = false;
 
         five.setOnClickListener(new View.OnClickListener()
         {
-
             public void onClick(View v) {
                 if(isResults)
                 results.setText("");
@@ -125,7 +109,6 @@ isResults = false;
 
         six.setOnClickListener(new View.OnClickListener()
         {
-
             public void onClick(View v) {
                 if(isResults)
                 results.setText("");
@@ -139,7 +122,6 @@ isResults = false;
 
         seven.setOnClickListener(new View.OnClickListener()
         {
-
             public void onClick(View v) {
                 if(isResults)
                 results.setText("");
@@ -295,8 +277,6 @@ isResults = false;
                     d = Double.parseDouble(a);
                     r = c * d;
                 }
-         // results.setText("test");
-          // Toast.makeText(MainActivity.this, "Result is::" + r, Toast.LENGTH_LONG).show();
                 c=0;
                 b=0;
                 d=0;
